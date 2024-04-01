@@ -1,0 +1,213 @@
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    background-size: 100vw 100vh;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.header {
+    margin-inline: auto;
+    max-width: 700px;
+    border: solid 3px rgba(255, 255, 255, 0.377);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+
+    @media (max-width:700px) {
+        margin-inline: 2rem;
+        padding: 0.5rem;
+    }
+}
+
+.logo {
+    margin: 1rem;
+
+    @media (max-width:700px) {
+        height: 70px;
+    }
+}
+
+.score-box {
+    background-color: white;
+    width: 25%;
+    border-radius: 10px;
+    margin: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-block: 0.5rem;
+
+    @media (max-width:700px) {
+        width: 30%;
+        padding-block: 0.2rem;
+        max-height: 70px;
+    }
+}
+
+.score-text {
+    font-weight: 700;
+    color: hsl(229, 64%, 46%);
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1.5px;
+
+    @media (max-width:700px) {
+        font-size: 0.7rem;
+    }
+}
+
+.score-number {
+    font-weight: 700;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    color: hsl(217, 16%, 45%);
+    position: relative;
+    top: 0px;
+
+    @media (max-width:700px) {
+        font-size: 3rem;
+    }
+}
+
+.container {
+    margin-top: 150px;
+    text-align: center;
+}
+
+.choose {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50vw;
+}
+
+.triangle {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: -100px;
+}
+
+.inner>img {
+    scale: 90%;
+    margin-top: 15px;
+    transition: scale 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+.choose>button {
+    position: absolute;
+    border: none;
+    outline: none;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.inner {
+    position: relative;
+    left: 10px;
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.158) inset;
+    cursor: pointer;
+}
+
+.inner:hover>img {
+    scale: 100%;
+}
+
+.paper {
+    top: -60px;
+    left: calc(-100px - 30px);
+    background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    box-shadow: 0px 7px 0px 0px hsl(230, 55%, 43%);
+}
+
+.scissors {
+    top: -60px;
+    left: calc(-100px + 120px);
+    background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    box-shadow: 0px 7px 0px 0px hsl(39, 89%, 31%);
+}
+
+.rock {
+    top: 80px;
+    left: calc(-100px + 40px);
+    background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    box-shadow: 0px 7px 0px 0px hsl(349, 66%, 37%);
+}
+
+.rock>.inner>img {
+    margin-top: 20px;
+}
+
+
+.rules-button {
+    position: absolute;
+    right: 60px;
+    bottom: 60px;
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 30px;
+    padding: 10px;
+    padding-inline: 20px;
+    outline: solid 2px white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    @media (max-width:700px) {
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 22px;
+    }
+}
+
+.rules-button:hover {
+    background: white;
+    color: black;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: rgb(205, 205, 205);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
